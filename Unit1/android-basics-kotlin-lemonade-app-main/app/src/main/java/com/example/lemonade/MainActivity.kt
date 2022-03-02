@@ -149,6 +149,24 @@ class MainActivity : AppCompatActivity() {
         // TODO: Additionally, for each state, the lemonImage should be set to the corresponding
         //  drawable from the drawable resources. The drawables have the same names as the strings
         //  but remember that they are drawables, not strings.
+        when(lemonadeState) {
+            SELECT -> {
+                lemonImage!!.setImageResource(R.drawable.lemon_tree)
+                textAction.setText(R.string.lemon_select)
+            }
+            SQUEEZE -> {
+                lemonImage!!.setImageResource(R.drawable.lemon_squeeze)
+                textAction.setText(R.string.lemon_squeeze)
+            }
+            DRINK -> {
+                lemonImage!!.setImageResource(R.drawable.lemon_drink)
+                textAction.setText(R.string.lemon_drink)
+            }
+            RESTART -> {
+                lemonImage!!.setImageResource(R.drawable.lemon_restart)
+                textAction.setText(R.string.lemon_empty_glass)
+            }
+        }
     }
 
     /**
